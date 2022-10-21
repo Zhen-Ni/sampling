@@ -8,13 +8,6 @@ import random
 from typing import Callable, Concatenate, ParamSpec, TypeVar
 from collections.abc import Sequence, Iterable
 
-import matplotlib as mpl
-import matplotlib.pyplot as plt
-mpl_fontpath = mpl.get_data_path() + '/fonts/ttf/STIXGeneral.ttf'
-mpl_fontprop = mpl.font_manager.FontProperties(fname=mpl_fontpath)
-plt.rc('font', family='STIXGeneral', weight='normal', size=10)
-plt.rc('mathtext', fontset='stix')
-
 
 def gaussian() -> float:
     """Samples from standard Gaussian distribution.
@@ -167,6 +160,12 @@ def _test_metropolis():
 
 
 if __name__ == '__main__':
+    import matplotlib as mpl
+    import matplotlib.pyplot as plt
+    mpl_fontpath = mpl.get_data_path() + '/fonts/ttf/STIXGeneral.ttf'
+    mpl_fontprop = mpl.font_manager.FontProperties(fname=mpl_fontpath)
+    plt.rc('font', family='STIXGeneral', weight='normal', size=10)
+    plt.rc('mathtext', fontset='stix')
     _test_gaussian()
     _test_rejection()
     _test_metropolis()

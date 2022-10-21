@@ -1,4 +1,2 @@
 * Introduction
 This python package provides some strategies for generating random samples from a given distribution. The algorithms of these strategies are described in Bishop's book /Pattern Recognition and Machine Learning/.
-
-This package relies only on numpy.
